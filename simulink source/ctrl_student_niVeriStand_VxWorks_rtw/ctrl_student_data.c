@@ -9,11 +9,15 @@
 /*
  * ctrl_student_data.c
  *
+ * Academic License - for use in teaching, academic research, and meeting
+ * course requirements at degree granting institutions only.  Not for
+ * government, commercial, or other organizational use.
+ *
  * Code generation for model "ctrl_student".
  *
- * Model version              : 1.57
- * Simulink Coder version : 8.6 (R2014a) 27-Dec-2013
- * C source code generated on : Tue Mar 01 09:17:38 2016
+ * Model version              : 1.80
+ * Simulink Coder version : 8.8 (R2015a) 09-Feb-2015
+ * C source code generated on : Wed Feb 01 11:56:44 2017
  *
  * Target selection: NIVeriStand_VxWorks.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -27,205 +31,58 @@
 /* Block parameters (auto storage) */
 P_ctrl_student_T ctrl_student_P = {
   -1.0,                                /* Expression: width
-                                        * Referenced by: '<Root>/control input u exceeds bounds'
+                                        * Referenced by: '<Root>/Test'
                                         */
   1.0,                                 /* Expression: dtype
-                                        * Referenced by: '<Root>/control input u exceeds bounds'
-                                        */
-  8.0,                                 /* Expression: portnum
-                                        * Referenced by: '<Root>/control input u exceeds bounds'
-                                        */
-  -1.0,                                /* Expression: stime
-                                        * Referenced by: '<Root>/control input u exceeds bounds'
-                                        */
-  1.0,                                 /* Expression: stype
-                                        * Referenced by: '<Root>/control input u exceeds bounds'
-                                        */
-  0.0,                                 /* Expression: btype
-                                        * Referenced by: '<Root>/control input u exceeds bounds'
-                                        */
-  -1.0,                                /* Expression: width
-                                        * Referenced by: '<S5>/alpha_VSP2'
-                                        */
-  1.0,                                 /* Expression: dtype
-                                        * Referenced by: '<S5>/alpha_VSP2'
+                                        * Referenced by: '<Root>/Test'
                                         */
   1.0,                                 /* Expression: portnum
-                                        * Referenced by: '<S5>/alpha_VSP2'
+                                        * Referenced by: '<Root>/Test'
                                         */
   -1.0,                                /* Expression: stime
-                                        * Referenced by: '<S5>/alpha_VSP2'
+                                        * Referenced by: '<Root>/Test'
                                         */
   1.0,                                 /* Expression: stype
-                                        * Referenced by: '<S5>/alpha_VSP2'
+                                        * Referenced by: '<Root>/Test'
                                         */
   0.0,                                 /* Expression: btype
-                                        * Referenced by: '<S5>/alpha_VSP2'
+                                        * Referenced by: '<Root>/Test'
                                         */
-  -1.0,                                /* Expression: width
-                                        * Referenced by: '<S5>/omega_VSP1'
+  0.01,                                /* Expression: 0.01
+                                        * Referenced by: '<S1>/Step size'
                                         */
-  1.0,                                 /* Expression: dtype
-                                        * Referenced by: '<S5>/omega_VSP1'
+  0.0,                                 /* Expression: 0
+                                        * Referenced by: '<S4>/counter'
                                         */
-  2.0,                                 /* Expression: portnum
-                                        * Referenced by: '<S5>/omega_VSP1'
+  0.0,                                 /* Expression: 0
+                                        * Referenced by: '<S5>/Hold'
                                         */
-  -1.0,                                /* Expression: stime
-                                        * Referenced by: '<S5>/omega_VSP1'
+  0.0,                                 /* Expression: 0
+                                        * Referenced by: '<S10>/White Noise'
                                         */
-  1.0,                                 /* Expression: stype
-                                        * Referenced by: '<S5>/omega_VSP1'
+  1.0,                                 /* Computed Parameter: WhiteNoise_StdDev
+                                        * Referenced by: '<S10>/White Noise'
                                         */
-  0.0,                                 /* Expression: btype
-                                        * Referenced by: '<S5>/omega_VSP1'
+  9024.0,                              /* Expression: 9024
+                                        * Referenced by: '<S10>/White Noise'
                                         */
-  -1.0,                                /* Expression: width
-                                        * Referenced by: '<S5>/omega_VSP2'
+  0.0,                                 /* Expression: 0
+                                        * Referenced by: '<S11>/White Noise'
                                         */
-  1.0,                                 /* Expression: dtype
-                                        * Referenced by: '<S5>/omega_VSP2'
+  1.0,                                 /* Computed Parameter: WhiteNoise_StdDev_d
+                                        * Referenced by: '<S11>/White Noise'
                                         */
-  3.0,                                 /* Expression: portnum
-                                        * Referenced by: '<S5>/omega_VSP2'
+  123.0,                               /* Expression: 123
+                                        * Referenced by: '<S11>/White Noise'
                                         */
-  -1.0,                                /* Expression: stime
-                                        * Referenced by: '<S5>/omega_VSP2'
+  0.0,                                 /* Expression: 0
+                                        * Referenced by: '<S9>/White Noise'
                                         */
-  1.0,                                 /* Expression: stype
-                                        * Referenced by: '<S5>/omega_VSP2'
+  1.0,                                 /* Computed Parameter: WhiteNoise_StdDev_g
+                                        * Referenced by: '<S9>/White Noise'
                                         */
-  0.0,                                 /* Expression: btype
-                                        * Referenced by: '<S5>/omega_VSP2'
-                                        */
-  -1.0,                                /* Expression: width
-                                        * Referenced by: '<S5>/alpha_VSP1'
-                                        */
-  1.0,                                 /* Expression: dtype
-                                        * Referenced by: '<S5>/alpha_VSP1'
-                                        */
-  4.0,                                 /* Expression: portnum
-                                        * Referenced by: '<S5>/alpha_VSP1'
-                                        */
-  -1.0,                                /* Expression: stime
-                                        * Referenced by: '<S5>/alpha_VSP1'
-                                        */
-  1.0,                                 /* Expression: stype
-                                        * Referenced by: '<S5>/alpha_VSP1'
-                                        */
-  0.0,                                 /* Expression: btype
-                                        * Referenced by: '<S5>/alpha_VSP1'
-                                        */
-  -1.0,                                /* Expression: width
-                                        * Referenced by: '<S5>/u_BT'
-                                        */
-  1.0,                                 /* Expression: dtype
-                                        * Referenced by: '<S5>/u_BT'
-                                        */
-  5.0,                                 /* Expression: portnum
-                                        * Referenced by: '<S5>/u_BT'
-                                        */
-  -1.0,                                /* Expression: stime
-                                        * Referenced by: '<S5>/u_BT'
-                                        */
-  1.0,                                 /* Expression: stype
-                                        * Referenced by: '<S5>/u_BT'
-                                        */
-  0.0,                                 /* Expression: btype
-                                        * Referenced by: '<S5>/u_BT'
-                                        */
-  -1.0,                                /* Expression: width
-                                        * Referenced by: '<S5>/u_VSP1'
-                                        */
-  1.0,                                 /* Expression: dtype
-                                        * Referenced by: '<S5>/u_VSP1'
-                                        */
-  6.0,                                 /* Expression: portnum
-                                        * Referenced by: '<S5>/u_VSP1'
-                                        */
-  -1.0,                                /* Expression: stime
-                                        * Referenced by: '<S5>/u_VSP1'
-                                        */
-  1.0,                                 /* Expression: stype
-                                        * Referenced by: '<S5>/u_VSP1'
-                                        */
-  0.0,                                 /* Expression: btype
-                                        * Referenced by: '<S5>/u_VSP1'
-                                        */
-  -1.0,                                /* Expression: width
-                                        * Referenced by: '<S5>/u_VSP2'
-                                        */
-  1.0,                                 /* Expression: dtype
-                                        * Referenced by: '<S5>/u_VSP2'
-                                        */
-  7.0,                                 /* Expression: portnum
-                                        * Referenced by: '<S5>/u_VSP2'
-                                        */
-  -1.0,                                /* Expression: stime
-                                        * Referenced by: '<S5>/u_VSP2'
-                                        */
-  1.0,                                 /* Expression: stype
-                                        * Referenced by: '<S5>/u_VSP2'
-                                        */
-  0.0,                                 /* Expression: btype
-                                        * Referenced by: '<S5>/u_VSP2'
-                                        */
-  1.0,                                 /* Expression: 1
-                                        * Referenced by: '<Root>/Constant'
-                                        */
-  -1.0,                                /* Expression: width
-                                        * Referenced by: '<S4>/x_m'
-                                        */
-  1.0,                                 /* Expression: dtype
-                                        * Referenced by: '<S4>/x_m'
-                                        */
-  1.0,                                 /* Expression: portnum
-                                        * Referenced by: '<S4>/x_m'
-                                        */
-  -1.0,                                /* Expression: stime
-                                        * Referenced by: '<S4>/x_m'
-                                        */
-  1.0,                                 /* Expression: stype
-                                        * Referenced by: '<S4>/x_m'
-                                        */
-  1.0,                                 /* Expression: btype
-                                        * Referenced by: '<S4>/x_m'
-                                        */
-  -1.0,                                /* Expression: width
-                                        * Referenced by: '<S4>/y_m'
-                                        */
-  1.0,                                 /* Expression: dtype
-                                        * Referenced by: '<S4>/y_m'
-                                        */
-  2.0,                                 /* Expression: portnum
-                                        * Referenced by: '<S4>/y_m'
-                                        */
-  -1.0,                                /* Expression: stime
-                                        * Referenced by: '<S4>/y_m'
-                                        */
-  1.0,                                 /* Expression: stype
-                                        * Referenced by: '<S4>/y_m'
-                                        */
-  1.0,                                 /* Expression: btype
-                                        * Referenced by: '<S4>/y_m'
-                                        */
-  -1.0,                                /* Expression: width
-                                        * Referenced by: '<S4>/psi_m'
-                                        */
-  1.0,                                 /* Expression: dtype
-                                        * Referenced by: '<S4>/psi_m'
-                                        */
-  3.0,                                 /* Expression: portnum
-                                        * Referenced by: '<S4>/psi_m'
-                                        */
-  -1.0,                                /* Expression: stime
-                                        * Referenced by: '<S4>/psi_m'
-                                        */
-  1.0,                                 /* Expression: stype
-                                        * Referenced by: '<S4>/psi_m'
-                                        */
-  1.0,                                 /* Expression: btype
-                                        * Referenced by: '<S4>/psi_m'
+  9025.0,                              /* Expression: 9025
+                                        * Referenced by: '<S9>/White Noise'
                                         */
   1.0                                  /* Expression: 1
                                         * Referenced by: '<Root>/NIVeriStandSignalProbe'
@@ -243,104 +100,6 @@ typedef struct {
 NI_ParamSizeWidth P_ctrl_student_T_sizes[] DataSection(".NIVS.defaultparamsizes")
   = {
   { sizeof(P_ctrl_student_T), 1 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
 
   { sizeof(real_T), 1, 0 },
 
